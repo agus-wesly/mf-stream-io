@@ -1,8 +1,7 @@
 Stream = require('node-rtsp-stream')
 stream = new Stream({
   name: 'Camera',
-  streamUrl: 'rtsp://eaglewing:eagle123wing@192.168.100.148:554/stream1',
-  wsPort: 6789,
+  streamUrl: 'rtsp://...', // Ganti dengan URL RTSP
   ffmpegOptions: {
     // options ffmpeg flags
     '-f': 'mpegts', // output file format.
