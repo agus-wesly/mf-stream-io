@@ -5,8 +5,10 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=41121 npx serve",
-    "start": "webpack serve --open --mode development & node src/utils/RTSPtoHSL.js",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start": "webpack serve --open --mode development",
+    "dev": "node src/utils/RTSPtoHSL.js",
+    "start:live": "webpack serve --open --mode development --live-reload --hot",
+    "start:dev": "concurrently \"npm run dev\" \"npm run start\""
   },
   "license": "MIT",
   "author": {
@@ -20,6 +22,7 @@
     "@babel/preset-react": "^7.14.5",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "concurrently": "^8.2.2",
     "css-loader": "^6.3.0",
     "dotenv-webpack": "^8.0.1",
     "html-webpack-plugin": "^5.3.2",
